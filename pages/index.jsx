@@ -1,11 +1,10 @@
-import Navbar from "../components/Navbar"
+import MainLayout from "../components/MainLayout"
 
 function Index() {
   return (
-    <div>
-      <Navbar />
+    <MainLayout>
       <h1>Home</h1>
-    </div>
+    </MainLayout>
   )
 }
 
