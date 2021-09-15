@@ -1,22 +1,9 @@
-import { useState } from 'react'
-import Navbar from '../../components/Navbar'
 import A from '../../components/A'
+import MainLayout from '../../components/MainLayout'
 
-function Users() {
-  const [users, setUsers] = useState([
-    {
-      id: 1,
-      name: 'vlad',
-    },
-    {
-      id: 2,
-      name: 'lisa',
-    }
-  ])
-
+function Users({users}) {
   return (
-    <div>
-      <Navbar />
+    <MainLayout>
       <h1>Users</h1>
       <ul>
         {
@@ -27,7 +14,7 @@ function Users() {
           })
         }
       </ul>
-    </div>
+    </MainLayout>
   )
 }
 
