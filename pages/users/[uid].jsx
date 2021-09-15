@@ -16,3 +16,14 @@ export default function UserPage() {
     </div>
   )
 }
+
+export async function getServerSideProps({query}) {
+  const response = await  fetch('https://jsonplaceholder.typicode.com/users/' + query.uid)
+  const user = await response.json()
+
+  return {
+    props: {
+      user
+    }
+  }
+}
